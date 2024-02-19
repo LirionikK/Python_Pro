@@ -4,9 +4,9 @@ import random as rn
 def guess_word(word):
     result = ["*"] * len(word)
     attempts_count = int(input("Enter number of attempts: "))
-    count = 0
-    while count < attempts_count:
-        user_try = input("Enter a letter or word: ")
+    guessed_letters = set()
+    while attempts_count > 0:
+        user_try = input("Enter a letter or word: ").lower()
 
         if len(user_try) > 1:
             if user_try == word:
@@ -14,16 +14,20 @@ def guess_word(word):
                 return
             else:
                 print("Слово не правильне. Спробуйте знову")
-                count += 1
+                attempts_count -= 1
+
         else:
             if user_try in word:
-                char_index = word.find(user_try)
-                result[char_index] = user_try
-                print(''.join(result))
+                guessed_letters.add(user_try)
+                remaining_word = ''.join([ch if ch in guessed_letters else '*' for ch in word])
+                print(remaining_word)
+
+                if '*' not in remaining_word:
+                    print("Вы угадали слово!")
+                    return
             else:
                 print("Такої літери немає")
-                count += 1
-                continue
+                attempts_count -= 1
     print("Ви програли")
 
 
