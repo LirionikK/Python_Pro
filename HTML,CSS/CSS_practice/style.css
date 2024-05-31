@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.body-main {
+  font-family: "Roboto", sans-serif;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-main {
+  width: 100%;
+  padding: 20px;
+  background-color: #eee
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: red;
+}
+
+
+.main-content {
+  margin: 20px;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 1200px;
+  border: 1px solid #ddd;
+}
+
+.welcome {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  font-size: 32px;
+}
+
+.welcome-text {
+  font-size: 20px;
+}
+
+.welcome-img {
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  min-width: 0;
+  min-height: 200px;
+}
+
+.reviews-list {
+  display: grid;
+  max-width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px 40px;
+}
+
+.review-item {
+  padding: 10px;
+  border: 1px solid #e4eaf2;
+}
+
+.review-title {
+  margin: 0;
+}
+
+.review-text {
+  color: #767676;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.ad-section {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 200px;
+}
+
+.ad-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.ad-text {
+  margin-top: 10px;
+}
+
+.ad-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-label {
+  padding-bottom: 5px;
+}
+
+.email-input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.subscribe-button {
+  background-color: #021076;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.subscribe-button:hover {
+  background-color: #000099;
+}
+
+.footer-main {
+  width: 100%;
+  padding: 20px;
+  background-color: #eee;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 12px;
+}
